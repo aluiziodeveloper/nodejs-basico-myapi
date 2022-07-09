@@ -1,6 +1,4 @@
 import { Request, Response } from 'express'
-import { RolesRepository } from '@roles/repositories/RolesRepository'
-import { AppError } from '@shared/errors/AppError'
 import { CreateRoleUseCase } from './CreateRoleUseCase'
 
 export class CreateRoleController {
