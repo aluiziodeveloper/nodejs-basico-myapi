@@ -8,5 +8,46 @@
       "name": "Jorge Aluizio",
       "email": "aluiziodeveloper@gmail.com"
     }
+  },
+  "paths": {
+    "/roles": {
+      "post": {
+        "tags": ["Role"],
+        "summary": "Create a role",
+        "description": "Create a new role",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Role created."
+          },
+          "400": {
+            "description": "Role already exists."
+          }
+        }
+      },
+      "get": {
+        "tags": ["Role"],
+        "summary": "List all roles",
+        "description": "Returns all roles paginated.",
+        "responses": {
+          "200": {
+            "description": "Success."
+          }
+        }
+      }
+    }
   }
 }
