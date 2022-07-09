@@ -27,6 +27,7 @@ export class RolesRepository {
   }
 
   findByName(name: string): Role | undefined {
-    return this.roles.find(role => role.name === name)
+    const role = this.roles.find(role => role.name === name)
+    return role
   }
 }
