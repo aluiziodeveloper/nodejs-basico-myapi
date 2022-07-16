@@ -6,6 +6,7 @@ import { errors } from 'celebrate'
 import { routes } from './routes'
 import { AppError } from '@shared/errors/AppError'
 import swaggerFile from '../../swagger.json'
+import '@shared/container'
 
 const app = express()
 app.use(cors())
