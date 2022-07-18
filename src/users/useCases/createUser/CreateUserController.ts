@@ -1,4 +1,3 @@
-import { instanceToInstance } from 'class-transformer'
 import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { CreateUserUseCase } from './CreateUserUseCase'
@@ -14,6 +13,6 @@ export class CreateUserController {
       isAdmin,
       roleId,
     })
-    return response.status(201).json(instanceToInstance(user))
+    return response.status(201).json(user)
   }
 }
