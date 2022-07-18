@@ -2,15 +2,18 @@ import express, { NextFunction, Request, Response } from 'express'
 import 'express-async-errors'
 import swaggerUi from 'swagger-ui-express'
 import cors from 'cors'
+import path from 'node:path'
 import { errors } from 'celebrate'
 import { routes } from './routes'
 import { AppError } from '@shared/errors/AppError'
 import swaggerFile from '../../swagger.json'
 import '@shared/container'
+import uploadConfig from '@config/upload'
 
 const app = express()
 app.use(cors())
 app.use(express.json())
+app.use('/files', express.static(uploadConfig.directory))
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 app.use(routes)
 app.use(errors())
