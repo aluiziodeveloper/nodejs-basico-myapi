@@ -53,6 +53,9 @@
           },
           "400": {
             "description": "Role already exists."
+          },
+          "401":{
+            "description": "Invalid authentication token."
           }
         }
       },
@@ -108,6 +111,9 @@
                 }
               }
             }
+          },
+          "401":{
+            "description": "Invalid authentication token."
           }
         }
       }
@@ -174,6 +180,9 @@
           "400":{
             "description": "Bad request."
           },
+          "401":{
+            "description": "Invalid authentication token."
+          },
           "404": {
             "description": "Role not found."
           }
@@ -225,6 +234,9 @@
           "400":{
             "description": "Bad request."
           },
+          "401":{
+            "description": "Invalid authentication token."
+          },
           "404": {
             "description": "Role not found."
           }
@@ -252,6 +264,9 @@
           },
           "400":{
             "description": "Bad request."
+          },
+          "401":{
+            "description": "Invalid authentication token."
           },
           "404": {
             "description": "Role not found."
