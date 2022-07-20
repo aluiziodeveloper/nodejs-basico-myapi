@@ -258,6 +258,96 @@
           }
         }
       }
+    },
+    "/users": {
+      "post":{
+        "tags":["Users"],
+        "summary":"Create a user",
+        "description":"Create a new user",
+        "requestBody":{
+          "content":{
+            "application/json":{
+              "schema":{
+                "type":"object",
+                "properties":{
+                  "name":{
+                    "type":"string"
+                  },
+                  "email":{
+                    "type":"string"
+                  },
+                  "password":{
+                    "type":"string"
+                  },
+                  "isAdmin":{
+                    "type":"boolean"
+                  },
+                  "roleId":{
+                    "type":"string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses":{
+          "201":{
+            "description":"User created.",
+            "content":{
+              "application/json":{
+                "schema":{
+                  "type":"object",
+                  "properties":{
+                    "id":{
+                      "type":"string"
+                    },
+                    "name":{
+                      "type":"string"
+                    },
+                    "email":{
+                      "type":"string"
+                    },
+                    "password":{
+                      "type":"string"
+                    },
+                    "isAdmin":{
+                      "type":"boolean"
+                    },
+                    "roleId":{
+                      "type":"string"
+                    },
+                    "created_at":{
+                      "type":"string"
+                    }
+                  },
+                  "example":{
+                    "id": "87a08fa9-d4f4-4331-ba07-b9aa4a345c88",
+                    "name": "John Doe",
+                    "email": "john@mail.com",
+                    "isAdmin": true,
+                    "role": {
+                      "id": "144ec9e3-3fa7-4cec-9342-27afb909c555",
+                      "name": "Technology",
+                      "created_at": "2022-07-18T17:29:43.000Z"
+                    },
+                    "created_at": "2022-07-20T02:26:28.000Z",
+                    "avatar_url": null
+                  }
+                }
+              }
+            }
+          },
+          "400":{
+            "description": "Email address already used."
+          },
+          "401":{
+            "description": "Invalid authentication token."
+          },
+          "404":{
+            "description": "Role not found."
+          }
+        }
+      }
     }
   }
 }
