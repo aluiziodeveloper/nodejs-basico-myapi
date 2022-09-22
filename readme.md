@@ -39,6 +39,8 @@ Após essa instalação execute a aplicação em ambiente de desenvolvimento dev
 
 [Perfil Udemy](https://aluiziodeveloper.com.br)
 
+[Cursos Gratuitos](https://letsgoahead.com.br/)
+
 [YouTube](https://www.youtube.com/jorgealuizio)
 
 [Servidor no Discord](https://discord.gg/3J87BMz5fD)
