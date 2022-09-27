@@ -30,6 +30,7 @@ export class CreateAccessAndRefreshTokenUseCase {
     refresh_token,
   }: CreateAccessAndRefreshTokenDTO): Promise<IResponse> {
     const user = await this.usersRepository.findById(user_id)
+    console.log(user_id)
     if (!user) {
       throw new AppError('User not found', 404)
     }
